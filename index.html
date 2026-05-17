@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Laparoskopische Instrumente | Minimalinvasive Chirurgie der Zukunft</title>
+  <meta name="description" content="Hochpräzise laparoskopische Instrumente für die minimalinvasive Chirurgie – Greifer, Scheren, Dissektoren aus Edelstahl. Für schnellere Genesung & kleinere Narben.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --lap-deep: #0B2A2F;
+      --lap-teal: #1E6B6E;
+      --lap-sage: #4C9F87;
+      --lap-brass: #D6AF65;
+      --lap-light: #F6F8F5;
+      --white: #FFFFFF;
+      --gray-100: #F0F4F7;
+      --gray-200: #E2E9F0;
+      --gray-600: #5B6E7C;
+      --gray-800: #1F2F3A;
+      --shadow-sm: 0 16px 28px -12px rgba(0,0,0,0.06);
+      --shadow-md: 0 24px 42px -18px rgba(0,0,0,0.12);
+      --shadow-hover: 0 34px 52px -22px rgba(0,0,0,0.2);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--lap-light);
+      color: var(--gray-800);
+      line-height: 1.55;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .serif-title {
+      font-family: 'Marcellus', serif;
+      font-weight: 400;
+      letter-spacing: -0.2px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3.8vw, 3rem);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* modern header */
+    .site-header {
+      background: var(--lap-deep);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--lap-brass);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0.9rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      border: none;
+    }
+    .logo-icon {
+      background: var(--lap-brass);
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--lap-deep);
+    }
+    .logo-text {
+      font-family: 'Marcellus', serif;
+      font-size: 1.7rem;
+      color: white;
+    }
+    .logo-text span {
+      color: var(--lap-brass);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: 0.2s;
+      border-bottom: 1px solid transparent;
+    }
+    .nav-links a:hover {
+      color: var(--lap-brass);
+      border-bottom-color: var(--lap-brass);
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(115deg, var(--lap-deep) 0%, #1A6365 100%);
+      color: white;
+      padding: 5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero:after {
+      content: '';
+      position: absolute;
+      bottom: -15%;
+      right: -5%;
+      width: 460px;
+      height: 460px;
+      background: radial-gradient(circle, rgba(214,175,101,0.2), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(214,175,101,0.2);
+      backdrop-filter: blur(4px);
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(214,175,101,0.5);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--lap-brass);
+    }
+    .hero-desc {
+      font-size: 1.2rem;
+      max-width: 640px;
+      opacity: 0.92;
+      margin: 1.2rem 0 2rem;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .stat .stat-value {
+      font-family: 'Marcellus', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--lap-brass);
+    }
+    .btn-primary, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      font-weight: 700;
+      transition: 0.25s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--lap-brass);
+      color: var(--lap-deep);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+    .btn-primary:hover {
+      background: #ecca86;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+    }
+
+    /* general sections */
+    .section {
+      padding: 5rem 0;
+    }
+    .section-white {
+      background: var(--white);
+    }
+    .section-soft {
+      background: var(--gray-100);
+    }
+    .eyebrow {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--lap-teal);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .lead-text {
+      font-size: 1.2rem;
+      color: var(--gray-600);
+      margin: 1rem 0 1.2rem;
+    }
+    .inline-link {
+      font-weight: 700;
+      color: var(--lap-sage);
+      border-bottom: 2px solid var(--lap-brass);
+      transition: 0.2s;
+    }
+    .inline-link:hover {
+      color: var(--lap-deep);
+      border-bottom-color: var(--lap-deep);
+    }
+
+    /* card grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .instru-card {
+      background: var(--white);
+      border-radius: 28px;
+      padding: 2rem 1.8rem;
+      transition: all 0.3s;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    .instru-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--lap-sage);
+    }
+    .card-icon {
+      font-size: 2.2rem;
+      color: var(--lap-sage);
+      margin-bottom: 1rem;
+    }
+
+    /* table design */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 24px;
+      background: white;
+      box-shadow: var(--shadow-sm);
+      margin: 2rem 0;
+    }
+    .lap-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .lap-table th {
+      background: var(--lap-deep);
+      color: white;
+      padding: 1rem 1.5rem;
+      font-family: 'Marcellus', serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+    .lap-table td {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+      color: var(--gray-800);
+      font-weight: 500;
+    }
+    .lap-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* benefit list */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .benefits-grid li {
+      list-style: none;
+      background: var(--white);
+      padding: 1rem 1rem 1rem 3rem;
+      border-radius: 60px;
+      position: relative;
+      font-weight: 500;
+      border: 1px solid var(--gray-200);
+      transition: 0.2s;
+    }
+    .benefits-grid li:before {
+      content: "🔹";
+      position: absolute;
+      left: 1.1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      color: var(--lap-brass);
+    }
+
+    /* cta */
+    .cta-lap {
+      background: linear-gradient(105deg, var(--lap-deep) 0%, #1F7679 100%);
+      text-align: center;
+      padding: 4rem 2rem;
+      color: white;
+    }
+    .cta-lap h2 {
+      color: white;
+    }
+    .cta-lap .btn-primary {
+      margin-top: 1.2rem;
+    }
+
+    /* footer */
+    footer {
+      background: #07262c;
+      color: #c6dfe6;
+      padding: 3rem 2rem 1.5rem;
+      border-top: 5px solid var(--lap-brass);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    @media (max-width: 780px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .footer-logo {
+      font-family: 'Marcellus', serif;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 0.8rem;
+    }
+    .footer-col h4 {
+      color: white;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    .footer-col a {
+      color: #c6dfe6;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      transition: 0.2s;
+      border: none;
+    }
+    .footer-col a:hover {
+      color: var(--lap-brass);
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      background: rgba(255,255,255,0.08);
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 40px;
+      transition: 0.2s;
+    }
+    .social-links a:hover {
+      background: var(--lap-brass);
+      color: var(--lap-deep);
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.8rem;
+    }
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon"><i class="fas fa-microscope"></i></div>
+      <div class="logo-text">Min<span>Access</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#ueberblick">Überblick</a></li>
+      <li><a href="#arten">Instrumente & Typen</a></li>
+      <li><a href="#vorteile">Vorteile MIS</a></li>
+      <li><a href="#sterilisation">Sterilisation</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><i class="fas fa-robot"></i> Minimalinvasive Chirurgie · Goldstandard</div>
+      <h1>Laparoskopische Instrumente in der <em>modernen Chirurgie</em></h1>
+      <p class="hero-desc">Präzise, schlanke Werkzeuge für die Schlüssellochchirurgie – reduzierte Traumata, kürzere Genesung und exzellente OP-Ergebnisse.</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://vubu-medical.de/chirurgische-instrumente" target="_blank" rel="noopener" class="btn-primary"><i class="fas fa-syringe"></i> Laparoskopische Instrumente entdecken</a>
+        <a href="#arten" class="btn-outline"><i class="fas fa-angle-down"></i> Instrumenten-Übersicht</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-value">5–10 mm</div><div>Trokar-Inzisionen</div></div>
+        <div class="stat"><div class="stat-value">360°</div><div>Drehbare Arbeitsköpfe</div></div>
+        <div class="stat"><div class="stat-value">Edelstahl</div><div>Autoklavierbar</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO + FIRST LINK (anchor "Laparoskopische Instrumente" in der Mitte) -->
+  <section class="section section-white" id="ueberblick">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-info-circle"></i> Grundlagen minimalinvasiver OP-Technik</span>
+      <h2>Was sind <em>laparoskopische Instrumente</em>?</h2>
+      <p class="lead-text">Laparoskopische Instrumente sind spezielle, lange und dünne chirurgische Werkzeuge, die über kleine Trokare in die Bauchhöhle eingeführt werden. Sie ermöglichen komplexe Eingriffe ohne großen Hautschnitt – das Herzstück der modernen Schlüssellochchirurgie.</p>
+      <p>Die Instrumente bestehen aus Griff, Schaft und einem feinen Arbeitsteil (Greifer, Schere, Klammernahtgerät). Zusammen mit einer 3D-Kamera visualisieren sie den Operationssitus in hochauflösender Vergrößerung. <strong>Präzisionsinstrumente aus dem Portfolio:</strong> <a href="https://vubu-medical.de/chirurgische-instrumente" target="_blank" rel="noopener" class="inline-link">Laparoskopische Instrumente</a> bieten höchste Qualität für Gallenblasenentfernungen, Hernienreparationen und gynäkologische Eingriffe.</p>
+      <p>Durch die verbesserte Ergonomie und die Vielzahl an Spitzenvarianten – atraumatische Greifer, gebogene Scheren, scharfe Dissektoren – können Chirurgen selbst komplizierte Eingriffe wie Darmresektionen oder Antirefluxchirurgie durchführen. Die Vorteile für den Patienten: minimale Narben, weniger postoperative Schmerzen und signifikant kürzere Krankenhausaufenthalte.</p>
+    </div>
+  </section>
+
+  <!-- Arten & Tabelle der wichtigsten Instrumente -->
+  <section class="section section-soft" id="arten">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-table-list"></i> Instrumentenübersicht</span>
+      <h2>Die wichtigsten laparoskopischen Instrumente im Detail</h2>
+      <div class="table-wrapper">
+        <table class="lap-table">
+          <thead>
+            <tr><th>Instrument</th><th>Funktion</th><th>Einsatzbereich</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Greifzange (Fenster/atraumatisch)</td><td>Halten, Positionieren von Gewebe</td><td>Allgemeine Laparoskopie, Adhäsiolyse</td></tr>
+            <tr><td>Laparoskopische Schere</td><td>Präzises Schneiden & Dissektion</td><td>Gewebetrennung, Banddurchtrennung</td></tr>
+            <tr><td>Klammernahtgerät (Ligatur)</td><td>Blutstillung, Gewebeverschluss</td><td>Gefäßligatur, Lungen- / Darmchirurgie</td></tr>
+            <tr><td>Dissektor & Haken</td><td>Schonende Gewebepräparation</td><td>Lymphknotenentfernung, Gallengangspräparation</td></tr>
+            <tr><td>Bajonett-Saugspülgerät</td><td>Flüssigkeitsabsaugung, Spülung</td><td>Sichtverbesserung, intraoperative Reinigung</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lead-text">Moderne laparoskopische Sets enthalten häufig rotierende Instrumente mit ergonomischen Daumenringen, um die natürliche Handhaltung zu unterstützen. Die Längen variieren zwischen 28 und 45 cm, abgestimmt auf Adipositas oder schmale Körperstaturen.</p>
+    </div>
+  </section>
+
+  <!-- Vorteile + SECOND LINK (mitten im Content, chirurgische-schere) -->
+  <section class="section section-white" id="vorteile">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-chart-line"></i> Klinische Mehrwerte</span>
+      <h2>Entscheidende Vorteile der <em>laparoskopischen Instrumente</em></h2>
+      <ul class="benefits-grid">
+        <li>Minimalinvasive Technik – kleine Schnitte, weniger Narben</li>
+        <li>Reduzierte postoperative Schmerzen & geringerer Blutverlust</li>
+        <li>Kürzerer Krankenhausaufenthalt, schnellere Rückkehr in Alltag</li>
+        <li>Geringeres Infektionsrisiko durch kleine Einstiche</li>
+        <li>Vergrößerte, hochauflösende Kameraansicht für Präzision</li>
+        <li>Langlebige Edelstahlinstrumente, autoklavierbar</li>
+        <li>Einsetzbar in Viszeralchirurgie, Gynäkologie, Urologie</li>
+      </ul>
+      <p class="lead-text" style="margin-top: 1rem;">Optimale Ergänzung für jede OP-Abteilung: <strong>Verwandte Instrumente und weiterführende Ressourcen:</strong> <a href="https://willaiam.codeberg.page/chirurgische-schere/" target="_blank" rel="noopener" class="inline-link">chirurgische Scheren für Präparation und Nahttrennung</a> – perfekt kombiniert mit laparoskopischen Greifern.</p>
+      <p>Durch den Einsatz laparoskopischer Instrumente sinkt die Belastung für das umliegende Gewebe dramatisch. Studien belegen, dass Patienten nach MIS-Eingriffen weniger Analgetika benötigen und ihre Lebensqualität rascher wiedererlangen. Auch aus ökonomischer Sicht bieten sich Vorteile durch verkürzte Liegezeiten.</p>
+    </div>
+  </section>
+
+  <!-- Material + Aufbau card -->
+  <section class="section section-soft">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+        <div style="flex: 1.2;">
+          <span class="eyebrow"><i class="fas fa-industry"></i> Material & Hightech-Fertigung</span>
+          <h2>Medizinischer Edelstahl & modulare Systeme</h2>
+          <p>Hochwertige laparoskopische Instrumente werden aus korrosionsbeständigem Chirurgenstahl gefertigt, meist mit Hartmetall-Backen oder diamantähnlicher Beschichtung für langen Kantenerhalt. Die Schäfte sind durch spezielle Isolierung für die monopolar / bipolar HF-Chirurgie geeignet.</p>
+          <p>Moderne Designs enthalten austauschbare Arbeitsteile („Rapid-Exchange“), die eine schnelle Anpassung während der OP erlauben. Ergonomische Handgriffe mit Ratsche oder Feinjustierung vermeiden Handkrämpfe und ermöglichen stundenlanges, tremorfreies Arbeiten.</p>
+        </div>
+        <div style="flex: 1; background: white; border-radius: 28px; padding: 2rem; text-align: center; box-shadow: var(--shadow-sm);">
+          <i class="fas fa-gem" style="font-size: 3rem; color: var(--lap-sage);"></i>
+          <p style="font-weight: 600; margin-top: 0.8rem;">CE-zertifiziert · ISO 13485<br>Bis zu 400 Sterilisationszyklen</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reinigung + Sterilisation -->
+  <section class="section section-white" id="sterilisation">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-hand-sparkles"></i> Hygienemanagement</span>
+      <div class="card-grid">
+        <div class="instru-card">
+          <div class="card-icon"><i class="fas fa-soap"></i></div>
+          <h3>Professionelle Reinigung</h3>
+          <p>Manuelle Vorreinigung mit Bürsten für Lumen und Gelenke – dann maschinelle thermische Desinfektion.</p>
+        </div>
+        <div class="instru-card">
+          <div class="card-icon"><i class="fas fa-temperature-high"></i></div>
+          <h3>Autoklav-Standard</h3>
+          <p>Dampfsterilisation bei 134°C gewährleistet Keimfreiheit, auch für komplexe Mehrteil-Instrumente.</p>
+        </div>
+        <div class="instru-card">
+          <div class="card-icon"><i class="fas fa-clinic-medical"></i></div>
+          <h3>Regelmäßige Inspektion</h3>
+          <p>Prüfung der Schneiden, Isolationsschäden und Gelenkspiel – nur einwandfreie Instrumente garantieren OP-Sicherheit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rolle in moderner Chirurgie -->
+  <section class="section section-soft">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-heartbeat"></i> Zukunft der minimalinvasiven Therapie</span>
+      <h2>Laparoskopische Instrumente als <em>Gamechanger der Chirurgie</em></h2>
+      <p class="lead-text">Von der ersten Cholezystektomie bis zur roboterassistierten Chirurgie – laparoskopische Werkzeuge haben die operative Landschaft revolutioniert. Dank technischer Innovationen wie 3D-Vision, flexibler Spitzen (articulating shafts) und intraoperativem Imaging können heute hochkomplexe onkologische Eingriffe minimalinvasiv durchgeführt werden.</p>
+      <p>Die Weiterentwicklung geht hin zu smarter Sensorik, die Gewebsparameter misst, und zur Integration von Künstlicher Intelligenz. Dennoch bleibt die Basis: langlebige, präzisionsgefertigte Instrumente aus Edelstahl, die täglich im OP ihre Zuverlässigkeit beweisen.</p>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-lap">
+    <div class="container">
+      <h2>Mehr Präzision. <em>Weniger Invasivität.</em></h2>
+      <p style="max-width: 580px; margin: 0 auto; opacity: 0.9;">Entdecken Sie laparoskopische Instrumente in Premium-Qualität – vom klassischen Greifer bis zum High-End-Dissektor.</p>
+      <a href="https://vubu-medical.de/chirurgische-instrumente" target="_blank" rel="noopener" class="btn-primary"><i class="fas fa-cart-shopping"></i> Laparoskopische Instrumente jetzt ansehen</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><i class="fas fa-microscope"></i> Min<span>Access</span></div>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem;">Ihr Partner für minimalinvasive OP-Instrumente – Innovation, Sterilität und höchste chirurgische Präzision.</p>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Xing"><i class="fab fa-xing"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Instrumente</h4>
+      <a href="#">Laparoskopische Greifer</a>
+      <a href="#">MIS Scheren</a>
+      <a href="#">Dissektoren & Haken</a>
+      <a href="#">Trokar-Systeme</a>
+    </div>
+    <div class="footer-col">
+      <h4>Ressourcen</h4>
+      <a href="https://vubu-medical.de/chirurgische-instrumente" target="_blank">Online Shop</a>
+      <a href="https://willaiam.codeberg.page/chirurgische-schere/" target="_blank">Chirurgische Scheren Ratgeber</a>
+      <a href="#">Sterilisationsprotokolle</a>
+    </div>
+    <div class="footer-col">
+      <h4>Unternehmen</h4>
+      <a href="#">Über uns</a>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2026 MinAccess – Hochwertige laparoskopische Instrumente für die moderne minimalinvasive Chirurgie.
+  </div>
+</footer>
+</body>
+</html>
